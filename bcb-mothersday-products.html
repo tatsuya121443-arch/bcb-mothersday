@@ -3,120 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>母の日ギフト 商品一覧 | BLEU COMME BLEU</title>
+<title>母の日ギフト | BLEU COMME BLEU</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
-/* ===== RESET & BASE (Mobile-first) ===== */
+/* ===== RESET ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --rose:#c8727e;--rose-pale:#f9eeef;--rose-deep:#8a3d4a;
-  --cream:#faf7f4;--sand:#e8ddd4;--charcoal:#1c1916;
-  --warm-gray:#9a8c86;--gold:#b8966a;--white:#fff;
+  --bg:#ffffff;
+  --text:#1a1a1a;
+  --sub:#767676;
+  --accent:#f5f0eb;
+  --border:#e8e4e0;
+  --btn:#1a1a1a;
+  --btn-hover:#3a3a3a;
 }
 html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--charcoal);font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;font-size:15px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;-webkit-text-size-adjust:100%}
 
 /* ===== HEADER ===== */
-header{background:var(--white);border-bottom:1px solid var(--sand);padding:0 16px;position:sticky;top:0;z-index:100}
-.header-inner{height:48px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Montserrat',sans-serif;font-weight:300;font-size:10px;letter-spacing:.2em;color:var(--charcoal);text-decoration:none;text-transform:uppercase}
-.header-right{display:flex;align-items:center;gap:4px}
-.header-link{font-family:'Montserrat',sans-serif;font-weight:300;font-size:9px;letter-spacing:.2em;color:var(--warm-gray);text-decoration:none;text-transform:uppercase;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;padding:0 6px;transition:color .2s}
-.header-link:hover{color:var(--rose)}
+header{background:var(--bg);border-bottom:1px solid var(--border);padding:0 16px;position:sticky;top:0;z-index:100}
+.header-inner{height:52px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Montserrat',sans-serif;font-weight:300;font-size:10px;letter-spacing:.28em;color:var(--text);text-decoration:none;text-transform:uppercase}
+.header-nav{display:flex;align-items:center}
+.header-link{font-family:'Montserrat',sans-serif;font-weight:300;font-size:9px;letter-spacing:.22em;color:var(--sub);text-decoration:none;text-transform:uppercase;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;padding:0 8px;transition:color .2s}
+.header-link:hover{color:var(--text)}
 
 /* ===== HERO ===== */
-.hero{background:linear-gradient(160deg,#f9eeef 0%,#fdf5f0 60%,#f5e8e0 100%);padding:40px 20px 32px;text-align:center}
-.hero-title{font-family:'Cormorant Garamond','Georgia',serif;font-weight:300;font-size:34px;color:var(--charcoal);line-height:1.2;margin-bottom:14px}
-.hero-title em{font-style:italic;color:var(--rose)}
-.hero-date{display:inline-flex;align-items:center;gap:6px;background:var(--rose);color:var(--white);font-size:12px;padding:7px 18px;border-radius:20px;letter-spacing:.05em}
+.hero{padding:52px 20px 44px;text-align:center;border-bottom:1px solid var(--border)}
+.hero-tag{font-family:'Montserrat',sans-serif;font-weight:300;font-size:8px;letter-spacing:.55em;color:var(--sub);text-transform:uppercase;margin-bottom:20px;display:block}
+.hero-title{font-family:'Cormorant Garamond','Georgia',serif;font-weight:300;line-height:1.15;color:var(--text);margin-bottom:20px;font-size:38px}
+.hero-title em{font-style:italic}
+.hero-meta{display:inline-flex;align-items:center;gap:12px;font-size:11px;color:var(--sub);letter-spacing:.06em}
+.hero-meta::before,.hero-meta::after{content:'';display:block;width:28px;height:1px;background:var(--border)}
 
-/* ===== BANNER (compact strip) ===== */
-.banner{background:linear-gradient(135deg,#2d1a1f,#4a1e2a);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.banner-perks{display:flex;gap:10px 16px;flex-wrap:wrap;flex:1;min-width:0}
-.banner-perk{font-size:11px;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:4px;white-space:nowrap}
-.btn-banner{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;background:var(--rose);color:var(--white);font-size:11px;letter-spacing:.05em;text-decoration:none;border-radius:4px;white-space:nowrap;flex-shrink:0;transition:background .2s}
-.btn-banner:hover{background:var(--rose-deep)}
+/* ===== BANNER ===== */
+.banner{background:var(--text);padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.banner-perks{display:flex;gap:8px 18px;flex-wrap:wrap;flex:1;min-width:0}
+.banner-perk{font-size:11px;color:rgba(255,255,255,.65);white-space:nowrap;letter-spacing:.02em}
+.btn-banner{font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:1px;white-space:nowrap;flex-shrink:0;transition:color .2s}
+.btn-banner:hover{color:rgba(255,255,255,.9)}
 
 /* ===== FILTER BAR ===== */
-.filter-bar{background:var(--white);border-bottom:1px solid var(--sand);position:sticky;top:48px;z-index:90}
-.filter-row{display:flex;align-items:center;gap:6px;padding:10px 16px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.filter-bar{border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:90;background:var(--bg)}
+.filter-row{display:flex;align-items:center;padding:0 16px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .filter-row::-webkit-scrollbar{display:none}
-.filter-label{font-size:10px;font-weight:500;color:var(--charcoal);white-space:nowrap;flex-shrink:0;margin-right:2px}
-.filter-divider{width:1px;height:18px;background:var(--sand);flex-shrink:0;margin:0 6px}
-.filter-btn{padding:8px 14px;min-height:36px;border:1px solid var(--sand);background:transparent;cursor:pointer;font-family:'Noto Sans JP',sans-serif;font-weight:300;font-size:12px;color:var(--warm-gray);transition:all .2s;border-radius:20px;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent}
-.filter-btn:hover,.filter-btn.active{background:var(--rose);border-color:var(--rose);color:var(--white)}
-.filter-count{padding-left:12px;font-size:10px;color:var(--warm-gray);white-space:nowrap;flex-shrink:0;margin-left:auto;font-family:'Montserrat',sans-serif}
+.filter-label{font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:.35em;color:var(--sub);text-transform:uppercase;white-space:nowrap;flex-shrink:0;margin-right:14px}
+.filter-btn{min-height:48px;padding:0 16px;border:none;border-bottom:2px solid transparent;background:transparent;cursor:pointer;font-family:'Noto Sans JP',sans-serif;font-weight:300;font-size:12px;color:var(--sub);transition:color .15s,border-color .15s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+.filter-btn:hover{color:var(--text)}
+.filter-btn.active{color:var(--text);border-bottom-color:var(--text);font-weight:500}
+.filter-count{margin-left:auto;padding-left:16px;font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:.12em;color:var(--sub);white-space:nowrap;flex-shrink:0}
 
-/* ===== SECTION ===== */
-.section{padding:28px 16px 0}
-.section-title{font-family:'Cormorant Garamond','Georgia',serif;font-weight:300;font-size:22px;color:var(--charcoal);margin-bottom:4px;display:flex;align-items:center;gap:12px}
-.section-title::after{content:'';flex:1;height:1px;background:var(--sand)}
-.section-sub{font-size:11px;color:var(--warm-gray);margin-bottom:14px;letter-spacing:.08em}
+/* ===== CATEGORY GRID ===== */
+.section{padding:0 16px 56px}
+.grid-wrap{padding-top:40px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
 
-/* ===== PRODUCT GRID: 2col mobile → 3col → 4col ===== */
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:0}
-
-/* ===== PRODUCT CARD ===== */
-.card{background:var(--white);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.25,.46,.45,.94),box-shadow .35s}
-.card:hover{transform:translateY(-5px);box-shadow:0 14px 44px rgba(28,25,22,.11)}
-.card-link{display:block;text-decoration:none;color:inherit;flex:1}
-.card-img{aspect-ratio:3/4;overflow:hidden;position:relative;background:var(--rose-pale)}
-.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.25,.46,.45,.94);display:block}
-.card:hover .card-img img{transform:scale(1.07)}
-.card-badge{position:absolute;top:8px;left:8px;font-family:'Montserrat',sans-serif;font-weight:300;font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;z-index:1;border-radius:2px}
-.badge-gift{background:var(--rose);color:var(--white)}
-.badge-new{background:var(--gold);color:var(--white)}
-.badge-price{background:var(--charcoal);color:var(--white)}
-.card-body{padding:10px 12px 12px;flex:1;display:flex;flex-direction:column}
-.card-brand{font-family:'Montserrat',sans-serif;font-weight:300;font-size:8px;letter-spacing:.3em;color:var(--warm-gray);text-transform:uppercase;margin-bottom:4px}
-.card-name{font-size:12px;color:var(--charcoal);line-height:1.55;margin-bottom:8px;font-weight:400;flex:1}
-.card-price{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--charcoal);margin-bottom:10px}
-.card-price small{font-size:10px;color:var(--warm-gray);font-family:'Noto Sans JP',sans-serif;font-weight:300;margin-left:2px}
-.btn-cart{display:block;width:100%;padding:11px;min-height:44px;background:var(--charcoal);color:var(--white);border:none;font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.05em;cursor:pointer;text-align:center;text-decoration:none;transition:background .25s;border-radius:3px;flex-shrink:0;-webkit-tap-highlight-color:transparent}
-.btn-cart:hover{background:var(--rose)}
+/* ===== CARD ===== */
+.card{background:var(--bg);display:flex;flex-direction:column;cursor:pointer}
+.card-link{display:block;text-decoration:none;color:inherit;flex:1;outline:none}
+/* image */
+.card-img{aspect-ratio:3/4;overflow:hidden;background:var(--accent);position:relative}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+.card:hover .card-img img{transform:scale(1.05)}
+/* placeholder */
+.card-ph{aspect-ratio:3/4;background:var(--accent);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:24px;transition:background .3s}
+.card:hover .card-ph{background:#ede8e3}
+.card-ph-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:22px;color:var(--text);opacity:.32;line-height:1.2;text-align:center}
+.card-ph-line{width:24px;height:1px;background:var(--text);opacity:.15;margin:8px auto}
+/* body */
+.card-body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column}
+.card-cat{font-family:'Montserrat',sans-serif;font-weight:300;font-size:7px;letter-spacing:.4em;color:var(--sub);text-transform:uppercase;margin-bottom:6px}
+.card-name{font-size:13px;color:var(--text);font-weight:400;letter-spacing:.04em;margin-bottom:6px}
+.card-desc{font-size:11px;color:var(--sub);line-height:1.7;margin-bottom:14px;flex:1}
+.card-price-hint{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--sub);margin-bottom:12px}
+/* CTA */
+.btn-cat{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:44px;padding:0 16px;background:var(--btn);color:#fff;border:none;font-family:'Noto Sans JP',sans-serif;font-size:11px;letter-spacing:.06em;cursor:pointer;text-decoration:none;transition:background .2s;-webkit-tap-highlight-color:transparent}
+.btn-cat::after{content:'→';font-size:12px;opacity:.6}
+.btn-cat:hover{background:var(--btn-hover)}
 
 /* ===== VIEW ALL ===== */
-.view-all{padding:32px 16px 48px;display:flex;flex-direction:column;gap:10px}
-.btn-primary{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:var(--charcoal);color:var(--white);font-size:13px;letter-spacing:.05em;text-decoration:none;border-radius:4px;transition:background .2s;-webkit-tap-highlight-color:transparent}
-.btn-primary:hover{background:#2e2926}
-.btn-secondary{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:var(--rose);border:1px solid var(--rose);font-size:13px;letter-spacing:.05em;text-decoration:none;border-radius:4px;transition:all .2s;-webkit-tap-highlight-color:transparent}
-.btn-secondary:hover{background:var(--rose);color:var(--white)}
+.view-all{border-top:1px solid var(--border);margin:0 16px;padding:40px 0 56px;display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.view-all-note{font-size:12px;color:var(--sub);line-height:1.9;text-align:center;margin-bottom:6px}
+.btn-primary{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 32px;background:var(--btn);color:#fff;font-size:12px;letter-spacing:.1em;text-decoration:none;transition:background .2s}
+.btn-primary:hover{background:var(--btn-hover)}
+.btn-outline{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 32px;background:transparent;color:var(--text);border:1px solid var(--border);font-size:12px;letter-spacing:.1em;text-decoration:none;transition:border-color .2s}
+.btn-outline:hover{border-color:var(--text)}
 
 /* ===== FOOTER ===== */
-footer{background:var(--charcoal);padding:24px 16px;text-align:center}
-.footer-logo{font-family:'Montserrat',sans-serif;font-weight:200;font-size:10px;letter-spacing:.35em;color:rgba(255,255,255,.4);display:block;text-decoration:none;margin-bottom:8px}
-.footer-copy{font-family:'Montserrat',sans-serif;font-weight:200;font-size:9px;letter-spacing:.15em;color:rgba(255,255,255,.2)}
+footer{background:var(--text);padding:32px 16px;text-align:center}
+.footer-logo{font-family:'Montserrat',sans-serif;font-weight:200;font-size:9px;letter-spacing:.45em;color:rgba(255,255,255,.3);display:block;text-decoration:none;margin-bottom:10px;text-transform:uppercase}
+.footer-copy{font-family:'Montserrat',sans-serif;font-weight:200;font-size:8px;letter-spacing:.2em;color:rgba(255,255,255,.18)}
 
-/* ===== EMPTY STATE ===== */
-.empty-state{grid-column:1/-1;padding:48px 16px;text-align:center;color:var(--warm-gray);font-size:13px;display:none}
-
-/* ===== BREAKPOINTS ===== */
+/* ===== RESPONSIVE ===== */
 @media(min-width:600px){
   header{padding:0 32px}
-  .header-inner{height:52px}
-  .logo{font-size:11px;letter-spacing:.25em}
-  .hero{padding:52px 32px 44px}
-  .hero-title{font-size:44px}
-  .banner{padding:16px 32px}
-  .filter-row{padding:12px 32px}
-  .section{padding:36px 32px 0}
-  .section-title{font-size:26px}
-  .grid{grid-template-columns:repeat(3,1fr);gap:14px}
-  .view-all{flex-direction:row;justify-content:center;padding:40px 32px 56px}
-  .btn-primary,.btn-secondary{width:auto}
+  .hero{padding:68px 32px 56px}
+  .hero-title{font-size:52px}
+  .banner{padding:14px 32px}
+  .filter-row{padding:0 32px}
+  .section{padding:0 32px 64px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .card-ph-en{font-size:28px}
+  .view-all{margin:0 32px;flex-direction:row;justify-content:center;align-items:center}
+  .view-all-note{flex-basis:100%;margin-bottom:0}
+  .btn-primary,.btn-outline{width:auto}
 }
 @media(min-width:960px){
-  header{padding:0 40px}
-  .hero{padding:64px 40px 52px}
-  .hero-title{font-size:52px}
-  .banner{padding:16px 40px}
-  .filter-row{padding:14px 40px;gap:8px}
-  .filter-btn{font-size:11px}
-  .section{padding:48px 40px 0}
-  .grid{grid-template-columns:repeat(4,1fr);gap:20px}
-  .view-all{padding:48px 40px 64px}
+  header{padding:0 48px}
+  .logo{font-size:11px}
+  .hero{padding:88px 48px 68px}
+  .hero-title{font-size:64px}
+  .hero-tag{font-size:9px}
+  .banner{padding:15px 48px}
+  .filter-row{padding:0 48px}
+  .filter-btn{font-size:13px}
+  .section{padding:0 48px 72px}
+  .grid{grid-template-columns:repeat(4,1fr)}
+  .card-ph-en{font-size:32px}
+  .card-name{font-size:14px}
+  .view-all{margin:0 48px;padding:48px 0 72px}
 }
 </style>
 </head>
@@ -126,17 +133,18 @@ footer{background:var(--charcoal);padding:24px 16px;text-align:center}
 <header>
   <div class="header-inner">
     <a href="https://ec.bleucommebleu.jp/" class="logo">BLEU COMME BLEU 母の日</a>
-    <div class="header-right">
+    <nav class="header-nav">
       <a href="https://ec.bleucommebleu.jp/c/0000004376" class="header-link">Women</a>
       <a href="https://ec.bleucommebleu.jp/p/cart" class="header-link">Cart</a>
-    </div>
+    </nav>
   </div>
 </header>
 
 <!-- HERO -->
 <div class="hero">
+  <span class="hero-tag">Mother's Day Gift 2025</span>
   <h1 class="hero-title">お母さんへ、<em>贈りたい</em>もの</h1>
-  <span class="hero-date">5月11日（日）まで ・ 無料ラッピング実施中</span>
+  <span class="hero-meta">5月11日（日）まで</span>
 </div>
 
 <!-- BANNER -->
@@ -144,7 +152,7 @@ footer{background:var(--charcoal);padding:24px 16px;text-align:center}
   <div class="banner-perks">
     <span class="banner-perk">🎁 無料ラッピング</span>
     <span class="banner-perk">💌 メッセージカード無料</span>
-    <span class="banner-perk">🚚 ¥5,500以上送料無料</span>
+    <span class="banner-perk">🚚 ¥5,500以上 送料無料</span>
     <span class="banner-perk">🏅 ポイント5倍</span>
   </div>
   <a href="https://ec.bleucommebleu.jp/p/about/shipping-payment" class="btn-banner">詳細を見る</a>
@@ -153,181 +161,147 @@ footer{background:var(--charcoal);padding:24px 16px;text-align:center}
 <!-- FILTER BAR -->
 <div class="filter-bar">
   <div class="filter-row">
-    <span class="filter-label">予算</span>
-    <button class="filter-btn active" data-type="price" data-value="all" onclick="applyFilter(this)">すべて</button>
-    <button class="filter-btn" data-type="price" data-value="5000" onclick="applyFilter(this)">〜¥5,000</button>
-    <button class="filter-btn" data-type="price" data-value="10000" onclick="applyFilter(this)">¥5,000〜10,000</button>
-    <button class="filter-btn" data-type="price" data-value="20000" onclick="applyFilter(this)">¥10,000〜20,000</button>
-    <button class="filter-btn" data-type="price" data-value="over" onclick="applyFilter(this)">¥20,000〜</button>
-    <div class="filter-divider"></div>
-    <span class="filter-label">カテゴリ</span>
-    <button class="filter-btn active" data-type="cat" data-value="all" onclick="applyFilter(this)">すべて</button>
-    <button class="filter-btn" data-type="cat" data-value="bags" onclick="applyFilter(this)">バッグ</button>
-    <button class="filter-btn" data-type="cat" data-value="acc" onclick="applyFilter(this)">アクセサリー</button>
-    <button class="filter-btn" data-type="cat" data-value="fashion" onclick="applyFilter(this)">ファッション</button>
-    <button class="filter-btn" data-type="cat" data-value="goods" onclick="applyFilter(this)">雑貨</button>
-    <span class="filter-count" id="count">全 9 件</span>
+    <span class="filter-label">Budget</span>
+    <button class="filter-btn active" data-range="all" onclick="setFilter(this)">すべて</button>
+    <button class="filter-btn" data-range="5000" onclick="setFilter(this)">〜¥5,000</button>
+    <button class="filter-btn" data-range="10000" onclick="setFilter(this)">¥5,000〜10,000</button>
+    <button class="filter-btn" data-range="20000" onclick="setFilter(this)">¥10,000〜20,000</button>
+    <button class="filter-btn" data-range="over" onclick="setFilter(this)">¥20,000〜</button>
+    <span class="filter-count" id="count">7 カテゴリ</span>
   </div>
 </div>
 
-<!-- BAGS -->
-<section class="section" id="bags">
-  <h2 class="section-title">バッグ</h2>
-  <p class="section-sub">毎日使えるこだわりの一点を</p>
-  <div class="grid" id="grid-main">
+<!-- CATEGORY GRID -->
+<section class="section">
+  <div class="grid-wrap">
+    <div class="grid" id="grid">
 
-    <div class="card" data-price="5500" data-category="bags">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300536" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/653/000000065335/000000065335-07.jpg" alt="marimekko MINI UNIKKO ALL PURPOSE BAG" loading="lazy">
-          <span class="card-badge badge-gift">GIFT</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">marimekko</p>
-          <p class="card-name">MINI UNIKKO ALL PURPOSE BAG</p>
-          <p class="card-price">¥5,500<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300536" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
+      <!-- 1. スカーフ・ストール -->
+      <div class="card" data-min="4000" data-max="35000">
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004463" target="_blank" class="card-link">
+          <div class="card-ph">
+            <span class="card-ph-en">Scarves<br>&amp; Stoles</span>
+            <div class="card-ph-line"></div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Gift Selection</p>
+            <p class="card-name">スカーフ・ストール</p>
+            <p class="card-desc">軽やかに羽織れる、上質な一枚。さまざまなシーンで活躍します。</p>
+            <p class="card-price-hint">¥4,000〜</p>
+          </div>
+        </a>
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004463" target="_blank" class="btn-cat">カテゴリを見る</a>
+      </div>
 
-    <div class="card" data-price="12100" data-category="bags">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10141564" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/652/000000065263/000000065263-13.jpg" alt="OJO DE MEX Plastico Cago Tote Chico" loading="lazy">
-          <span class="card-badge badge-new">NEW</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">OJO DE MEX</p>
-          <p class="card-name">Plastico Cago Tote Chico</p>
-          <p class="card-price">¥12,100<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10141564" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
+      <!-- 2. バッグ -->
+      <div class="card" data-min="5500" data-max="60000">
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004462" target="_blank" class="card-link">
+          <div class="card-img">
+            <img src="https://bleucommebleu.itembox.cloud/product/651/000000065137/000000065137-11.jpg" alt="バッグ" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Gift Selection</p>
+            <p class="card-name">バッグ</p>
+            <p class="card-desc">毎日連れ出したくなる、こだわりの一点。国内外のブランドが揃います。</p>
+            <p class="card-price-hint">¥5,500〜</p>
+          </div>
+        </a>
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004462" target="_blank" class="btn-cat">カテゴリを見る</a>
+      </div>
 
-    <div class="card" data-price="13200" data-category="bags">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10280613" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/652/000000065247/000000065247-11.jpg" alt="The Bagmati アバカ カゴバッグ" loading="lazy">
-          <span class="card-badge badge-gift">GIFT</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">The Bagmati</p>
-          <p class="card-name">アバカ カゴバッグ ナチュラル</p>
-          <p class="card-price">¥13,200<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10280613" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
+      <!-- 3. アクセサリー -->
+      <div class="card" data-min="3300" data-max="25000">
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004463" target="_blank" class="card-link">
+          <div class="card-img">
+            <img src="https://bleucommebleu.itembox.cloud/product/651/000000065114/000000065114-08.jpg" alt="アクセサリー" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Gift Selection</p>
+            <p class="card-name">アクセサリー</p>
+            <p class="card-desc">さりげなく輝く、特別な贈り物。ネックレス、ピアス、ブレスレットなど。</p>
+            <p class="card-price-hint">¥3,300〜</p>
+          </div>
+        </a>
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004463" target="_blank" class="btn-cat">カテゴリを見る</a>
+      </div>
 
-    <div class="card" data-price="16500" data-category="bags">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300721" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/651/000000065137/000000065137-11.jpg" alt="A.P.C. Lou Rue Madame 2.0 トートバッグ" loading="lazy">
-          <span class="card-badge badge-gift">GIFT</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">A.P.C.</p>
-          <p class="card-name">Lou Rue Madame 2.0 トートバッグ</p>
-          <p class="card-price">¥16,500<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300721" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
+      <!-- 4. ワンピース -->
+      <div class="card" data-min="15000" data-max="80000">
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004420" target="_blank" class="card-link">
+          <div class="card-ph">
+            <span class="card-ph-en">One<br>Piece</span>
+            <div class="card-ph-line"></div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Gift Selection</p>
+            <p class="card-name">ワンピース</p>
+            <p class="card-desc">着るだけで気分が上がる、上質な一枚。初夏にぴったりのスタイルが揃います。</p>
+            <p class="card-price-hint">¥15,000〜</p>
+          </div>
+        </a>
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004420" target="_blank" class="btn-cat">カテゴリを見る</a>
+      </div>
 
-    <div class="card" data-price="22000" data-category="bags">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300661" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/650/000000065091/000000065091-11.jpg" alt="VIOLAd'ORO MIRO アバカ製 バケットバッグ" loading="lazy">
-          <span class="card-badge badge-gift">GIFT</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">VIOLAd'ORO</p>
-          <p class="card-name">MIRO アバカ製 バケットバッグ</p>
-          <p class="card-price">¥22,000<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300661" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
+      <!-- 5. 帽子 -->
+      <div class="card" data-min="5000" data-max="30000">
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004464" target="_blank" class="card-link">
+          <div class="card-ph">
+            <span class="card-ph-en">Hats &amp;<br>Caps</span>
+            <div class="card-ph-line"></div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Gift Selection</p>
+            <p class="card-name">帽子</p>
+            <p class="card-desc">初夏のお出かけに映える、お気に入りの一点。ハット、キャップなど多数。</p>
+            <p class="card-price-hint">¥5,000〜</p>
+          </div>
+        </a>
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004464" target="_blank" class="btn-cat">カテゴリを見る</a>
+      </div>
 
-    <div class="card" data-price="29700" data-category="bags">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10171155" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/651/000000065192/000000065192-11.jpg" alt="IL BISONTE クロスボディバッグ" loading="lazy">
-          <span class="card-badge badge-price">PREMIUM</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">IL BISONTE</p>
-          <p class="card-name">クロスボディバッグ 本革</p>
-          <p class="card-price">¥29,700<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10171155" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
+      <!-- 6. インテリア雑貨 -->
+      <div class="card" data-min="3000" data-max="20000">
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004466" target="_blank" class="card-link">
+          <div class="card-ph">
+            <span class="card-ph-en">Interior<br>Goods</span>
+            <div class="card-ph-line"></div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Gift Selection</p>
+            <p class="card-name">インテリア雑貨</p>
+            <p class="card-desc">暮らしに彩りを添える、とっておきの品。キャンドル、フレームなど。</p>
+            <p class="card-price-hint">¥3,000〜</p>
+          </div>
+        </a>
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004466" target="_blank" class="btn-cat">カテゴリを見る</a>
+      </div>
 
-    <div class="card" data-price="31900" data-category="bags">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300659" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/650/000000065061/000000065061-12.jpg" alt="VIOLAd'ORO SANDRO ラフィアシート トートバッグ" loading="lazy">
-          <span class="card-badge badge-price">PREMIUM</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">VIOLAd'ORO</p>
-          <p class="card-name">SANDRO ラフィアシート トートバッグ</p>
-          <p class="card-price">¥31,900<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300659" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
+      <!-- 7. トップス -->
+      <div class="card" data-min="8000" data-max="45000">
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004377" target="_blank" class="card-link">
+          <div class="card-ph">
+            <span class="card-ph-en">Tops</span>
+            <div class="card-ph-line"></div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Gift Selection</p>
+            <p class="card-name">トップス</p>
+            <p class="card-desc">毎日のスタイルをワンランクアップ。ブラウス、カットソーなど豊富に揃います。</p>
+            <p class="card-price-hint">¥8,000〜</p>
+          </div>
+        </a>
+        <a href="https://ec.bleucommebleu.jp/c/0000004376/0000004377" target="_blank" class="btn-cat">カテゴリを見る</a>
+      </div>
 
-    <div class="card" data-price="31900" data-category="bags">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300662" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/650/000000065092/000000065092-11.jpg" alt="VIOLAd'ORO SANDRO ラフィア 2WAYハンドバッグ" loading="lazy">
-          <span class="card-badge badge-price">PREMIUM</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">VIOLAd'ORO</p>
-          <p class="card-name">SANDRO ラフィア 2WAYハンドバッグ</p>
-          <p class="card-price">¥31,900<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300662" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
-
-    <p class="empty-state" id="empty-msg">条件に一致する商品がありません</p>
-  </div>
-</section>
-
-<!-- ACCESSORIES -->
-<section class="section" id="acc" style="padding-top:28px">
-  <h2 class="section-title">アクセサリー</h2>
-  <p class="section-sub">さりげなく華やかなプレゼントに</p>
-  <div class="grid">
-
-    <div class="card" data-price="3300" data-category="acc">
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300706" target="_blank" class="card-link">
-        <div class="card-img">
-          <img src="https://bleucommebleu.itembox.cloud/product/651/000000065114/000000065114-08.jpg" alt="Mille blanc チェーンネックレス" loading="lazy">
-          <span class="card-badge badge-gift">GIFT</span>
-        </div>
-        <div class="card-body">
-          <p class="card-brand">Mille blanc</p>
-          <p class="card-name">チェーンネックレス ゴールド / シルバー</p>
-          <p class="card-price">¥3,300<small>税込</small></p>
-        </div>
-      </a>
-      <a href="https://ec.bleucommebleu.jp/c/maingroup/10300706" target="_blank" class="btn-cart">カートに入れる</a>
-    </div>
-
+    </div><!-- /grid -->
   </div>
 </section>
 
 <!-- VIEW ALL -->
 <div class="view-all">
-  <a href="https://ec.bleucommebleu.jp/c/0000004376" target="_blank" class="btn-primary">Women 全商品を見る</a>
-  <a href="https://ec.bleucommebleu.jp/p/about/shipping-payment" target="_blank" class="btn-secondary">送料・ラッピングについて</a>
+  <p class="view-all-note">ブルーコムブルーのオンラインストアには、<br>ほかにも贈り物にぴったりなアイテムが揃っています。</p>
+  <a href="https://ec.bleucommebleu.jp/c/0000004376" target="_blank" class="btn-primary">全商品を見る</a>
+  <a href="https://ec.bleucommebleu.jp/p/about/shipping-payment" target="_blank" class="btn-outline">ラッピング・送料について</a>
 </div>
 
 <!-- FOOTER -->
@@ -337,52 +311,31 @@ footer{background:var(--charcoal);padding:24px 16px;text-align:center}
 </footer>
 
 <script>
-const priceRanges = {
+const budgetRanges = {
   'all':   [0, Infinity],
   '5000':  [0, 5000],
-  '10000': [5001, 10000],
-  '20000': [10001, 20000],
-  'over':  [20001, Infinity]
+  '10000': [4999, 10000],
+  '20000': [9999, 20000],
+  'over':  [19999, Infinity]
 };
 
-let activePrice = 'all';
-let activeCat = 'all';
-
-function applyFilter(btn) {
-  const type = btn.dataset.type;
-  const value = btn.dataset.value;
-
-  if (type === 'price') {
-    activePrice = value;
-    document.querySelectorAll('[data-type="price"]').forEach(b => b.classList.remove('active'));
-  } else {
-    activeCat = value;
-    document.querySelectorAll('[data-type="cat"]').forEach(b => b.classList.remove('active'));
-  }
+function setFilter(btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  updateDisplay();
-}
 
-function updateDisplay() {
-  const [min, max] = priceRanges[activePrice];
+  const [min, max] = budgetRanges[btn.dataset.range];
   let visible = 0;
-  document.querySelectorAll('.card').forEach(card => {
-    const price = parseInt(card.dataset.price || 0);
-    const cat = card.dataset.category || '';
-    const show = price >= min && price <= max && (activeCat === 'all' || cat === activeCat);
+
+  document.querySelectorAll('#grid .card').forEach(card => {
+    const cardMin = parseInt(card.dataset.min || 0);
+    const cardMax = parseInt(card.dataset.max || 0);
+    const show = btn.dataset.range === 'all' || (cardMin <= max && cardMax >= min);
     card.style.display = show ? '' : 'none';
     if (show) visible++;
   });
-  document.getElementById('count').textContent = `全 ${visible} 件`;
 
-  const emptyMsg = document.getElementById('empty-msg');
-  if (emptyMsg) emptyMsg.style.display = visible === 0 ? 'block' : 'none';
+  document.getElementById('count').textContent = visible + ' カテゴリ';
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const total = document.querySelectorAll('.card').length;
-  document.getElementById('count').textContent = `全 ${total} 件`;
-});
 </script>
 </body>
 </html>
